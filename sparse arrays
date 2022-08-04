@@ -1,0 +1,22 @@
+int main(){ 
+    char strings[1000][20],queries[20];
+    int n,i,m,cnt;
+    
+    scanf("%d",&n);
+    
+    for(i=0;i<n;i++)
+        scanf("%s",strings[i]);
+    scanf("%d",&m);
+    while(m--)
+    {
+        cnt=0;
+        scanf("%s",queries);
+        for(i=0;i<n;i++)
+        {
+            if(strcmp(queries,strings[i])==0)
+                cnt++;
+        }
+        printf("%d\n",cnt);
+    }
+    return 0;
+}
